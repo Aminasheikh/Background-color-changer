@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background-color</title>
+    <style>
+        body{
+            transition: background-color 0.4s ease;
+        }
+        h1{
+            color:blueviolet;
+            text-align: center;
+        }
+        p{
+            color:blueviolet;
+            text-align: center;
+            font-size:1.5rem;
+            font-weight:bold;
+        }
+        button{
+            background-color:blueviolet;
+            color:white;
+            border:none;
+            width:100px;
+            height:50px;
+            margin-left:680px;
+            font-size:0.9rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Hello! Friends</h1>
+    <p>I am color changer</p>
+    <button onclick="colorChange()">Change color</button>
+    <script>
+        function colorChange(){
+            const color = "#" + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = color;
+        }
+    </script>
 </body>
 </html>
